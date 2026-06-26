@@ -1,6 +1,6 @@
 ## alu-higher_level_programming
 
-This repository contains higher-level programming projects covering Python and Shell scripting.
+This repository contains higher-level programming projects covering more of Python and Shell scripting.
 
 ### Projects
 
