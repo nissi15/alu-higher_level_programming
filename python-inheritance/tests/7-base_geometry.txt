@@ -12,7 +12,7 @@ Load the class and make an instance:
 Valid integers pass with no output:
 
     >>> bg.integer_validator("my_int", 12)
-    >>> bg.integer_validator("width", 89)
+    >>> bg.integer_validator("age", 1)
 
 A string is not an integer:
 
@@ -28,9 +28,33 @@ A float is not an integer:
 
 A bool is not accepted as an integer:
 
-    >>> bg.integer_validator("width", True)
+    >>> bg.integer_validator("age", True)
     Traceback (most recent call last):
-    TypeError: width must be an integer
+    TypeError: age must be an integer
+
+A tuple is not an integer:
+
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+A list is not an integer:
+
+    >>> bg.integer_validator("age", [3])
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+A set is not an integer:
+
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+None is not an integer:
+
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
 Zero is not greater than 0:
 
@@ -40,9 +64,21 @@ Zero is not greater than 0:
 
 A negative value is not greater than 0:
 
-    >>> bg.integer_validator("distance", -4)
+    >>> bg.integer_validator("age", -4)
     Traceback (most recent call last):
-    ValueError: distance must be greater than 0
+    ValueError: age must be greater than 0
+
+Called with no value raises a missing-argument error:
+
+    >>> bg.integer_validator("age")  # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: ...integer_validator() missing 1 required positional argument: 'value'
+
+Called with no arguments raises a missing-argument error:
+
+    >>> bg.integer_validator()  # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: ...integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Calling area raises an exception:
 
