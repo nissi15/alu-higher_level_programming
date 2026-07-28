@@ -1,0 +1,39 @@
+The ``1-my_list`` module
+========================
+
+Using ``MyList``
+----------------
+
+Load the class:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Build a list and print it sorted:
+
+    >>> ml = MyList()
+    >>> ml.append(1)
+    >>> ml.append(4)
+    >>> ml.append(2)
+    >>> ml.append(3)
+    >>> ml.append(5)
+    >>> print(ml)
+    [1, 4, 2, 3, 5]
+    >>> ml.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(ml)
+    [1, 4, 2, 3, 5]
+
+An empty list stays empty:
+
+    >>> empty = MyList()
+    >>> empty.print_sorted()
+    []
+
+Negative numbers are sorted too:
+
+    >>> nums = MyList()
+    >>> nums.append(3)
+    >>> nums.append(-2)
+    >>> nums.append(0)
+    >>> nums.print_sorted()
+    [-2, 0, 3]
