@@ -82,6 +82,36 @@ Dividing by zero is not allowed:
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
 
+Dividing by infinity gives zero for every element:
+
+    >>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+Dividing by negative infinity gives negative zero:
+
+    >>> matrix_divided([[1, 2], [3, 4]], float('-inf'))
+    [[-0.0, -0.0], [-0.0, -0.0]]
+
+Dividing by not a number gives not a number:
+
+    >>> matrix_divided([[1, 2], [3, 4]], float('nan'))
+    [[nan, nan], [nan, nan]]
+
+A matrix holding infinity divided by an integer:
+
+    >>> matrix_divided([[1, float('inf')], [3, 4]], 2)
+    [[0.5, inf], [1.5, 2.0]]
+
+A matrix holding not a number divided by an integer:
+
+    >>> matrix_divided([[1, float('nan')], [3, 4]], 2)
+    [[0.5, nan], [1.5, 2.0]]
+
+A matrix holding infinity divided by infinity:
+
+    >>> matrix_divided([[1, float('inf')], [3, 4]], float('inf'))
+    [[0.0, nan], [0.0, 0.0]]
+
 Both arguments are required:
 
     >>> matrix_divided([[1, 2], [3, 4]])
