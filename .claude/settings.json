@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(python3 -m pycodestyle *.py)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"R=__import__\\('9-rectangle'\\).Rectangle; r=R\\(3,5\\); print\\(r\\); print\\(r.area\\(\\)\\)\")",
+      "Bash(python3 -c \"S=__import__\\('10-square'\\).Square; s=S\\(13\\); print\\(s\\); print\\(s.area\\(\\)\\)\")",
+      "Bash(python3 -c \"S=__import__\\('11-square'\\).Square; s=S\\(13\\); print\\(s\\); print\\(s.area\\(\\)\\)\")",
+      "Bash(python3 -m doctest ./tests/*)",
+      "Bash(python3 -c \"print\\(__import__\\('1-my_list'\\).__doc__\\)\")",
+      "Bash(printf 'line one\\\\nline two\\\\n')",
+      "Bash(python3 -c \"__import__\\('0-read_file'\\).read_file\\('my_file_0.txt'\\)\")",
+      "Bash(python3 -c \"print\\(__import__\\('1-write_file'\\).write_file\\('mf.txt','This School is so cool!\\\\n'\\)\\)\")",
+      "Bash(rm -f fa.txt)",
+      "Bash(wsl -d Ubuntu -- bash -lc 'which mysql mysqld mariadb 2>/dev/null; echo \"---version---\"; mysql --version 2>/dev/null || mariadb --version 2>/dev/null || echo \"no mysql/mariadb client\"; echo \"---service---\"; service mysql status 2>&1 | head -3')",
+      "Bash(echo \"EXITCODE=$?\")",
+      "Bash(wsl -d Ubuntu -- bash -lc ' *)",
+      "Bash(wsl -d Ubuntu -- bash -lc 'sudo -n mysql -e \"SELECT VERSION\\(\\);\" 2>&1 | head -3')",
+      "Bash(wsl -d Ubuntu -- bash -lc 'mysql -e \"SELECT CURRENT_USER\\(\\), VERSION\\(\\);\" 2>&1 | head -4')",
+      "Bash(wsl -d Ubuntu -- bash -lc 'mysql -e \"SELECT CURRENT_USER\\(\\), VERSION\\(\\);\"')",
+      "Bash(wsl -d *)",
+      "Bash(python3 -m pycodestyle 0-hbtn_status.py 4-hbtn_status.py)",
+      "Bash(python3 -m pycodestyle *.py tests/*.py)",
+      "Bash(python3 -m doctest ./tests/*.txt -v)",
+      "Bash(python3 -m doctest ./tests/*.txt)",
+      "Bash(python3 -m unittest tests.6-max_integer_test)",
+      "Bash(python3 -m doctest tests/2-matrix_divided.txt -v)",
+      "Bash(rm -f /tmp/mutant.py)",
+      "Bash(git config *)",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc 'mysql -e \"SELECT CURRENT_USER\\(\\);\" 2>&1 | tail -3; echo \"--- grants ---\"; mysql -e \"SHOW GRANTS;\" 2>&1 | tail -5')",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc 'mysql -e \"CREATE USER IF NOT EXISTS '\"'\"'ormtest'\"'\"'@'\"'\"'localhost'\"'\"' IDENTIFIED WITH mysql_native_password BY '\"'\"'ormtest'\"'\"'; CREATE USER IF NOT EXISTS '\"'\"'ormtest'\"'\"'@'\"'\"'127.0.0.1'\"'\"' IDENTIFIED WITH mysql_native_password BY '\"'\"'ormtest'\"'\"'; GRANT ALL PRIVILEGES ON *.* TO '\"'\"'ormtest'\"'\"'@'\"'\"'localhost'\"'\"'; GRANT ALL PRIVILEGES ON *.* TO '\"'\"'ormtest'\"'\"'@'\"'\"'127.0.0.1'\"'\"'; FLUSH PRIVILEGES;\" 2>&1 | tail -3; mysql < ~/ormtest_seed.sql 2>&1 | tail -3; echo SEEDED; mysql -uormtest -pormtest -h127.0.0.1 -e \"SHOW DATABASES LIKE '\"'\"'hbtn%'\"'\"';\" 2>&1 | grep -v Warning')",
+      "Bash(wsl.exe -d *)",
+      "Bash(python -m doctest ./tests/2-matrix_divided.txt)",
+      "Bash(wsl.exe -d Ubuntu -- bash \"/mnt/c/Users/nissi/AppData/Local/Temp/claude/c--Users-nissi-Downloads-BSE-alu-higher-level-programming/c691dd9e-f5ef-410f-82a8-9893dbb31243/scratchpad/run1.sh\")",
+      "PowerShell(wsl -d Ubuntu -- bash /mnt/c/Users/nissi/AppData/Local/Temp/claude/c--Users-nissi-Downloads-BSE-alu-higher-level-programming/c691dd9e-f5ef-410f-82a8-9893dbb31243/scratchpad/run1.sh)",
+      "PowerShell(wsl -d Ubuntu -- bash /mnt/c/Users/nissi/AppData/Local/Temp/claude/c--Users-nissi-Downloads-BSE-alu-higher-level-programming/c691dd9e-f5ef-410f-82a8-9893dbb31243/scratchpad/run2.sh)",
+      "PowerShell(wsl -d Ubuntu -- bash /mnt/c/Users/nissi/AppData/Local/Temp/claude/c--Users-nissi-Downloads-BSE-alu-higher-level-programming/c691dd9e-f5ef-410f-82a8-9893dbb31243/scratchpad/run3.sh)",
+      "PowerShell(wsl -d Ubuntu -- bash /mnt/c/Users/nissi/AppData/Local/Temp/claude/c--Users-nissi-Downloads-BSE-alu-higher-level-programming/c691dd9e-f5ef-410f-82a8-9893dbb31243/scratchpad/check.sh)",
+      "PowerShell(wsl -d Ubuntu -- bash -c \"cd /mnt/c/Users/nissi/Downloads/BSE/alu-higher_level_programming/python-object_relational_mapping; rm -rf __pycache__; ls -la\")"
+    ]
+  }
+}
